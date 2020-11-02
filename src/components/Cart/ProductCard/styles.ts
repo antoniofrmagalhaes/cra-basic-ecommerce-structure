@@ -11,11 +11,11 @@ export const Container = styled.li`
   border-radius: 4px;
   background: ${({ theme }) => theme.colors.accentColor};
   & + li {
-    margin-top: 8px;
+    margin-top: 16px;
   }
   @media (min-width: 375px) {
     height: 120px;
-    padding: 16px;
+    padding: 12px;
   }
   @media (min-width: 1024px) {
     height: 86px;
@@ -23,47 +23,51 @@ export const Container = styled.li`
   }
   @media (min-width: 1280px) {
     height: 94px;
+    padding: 12px;
   }
   @media (min-width: 1440px) {
     height: 105px;
-    padding: 10px;
   }
   @media (min-width: 1600px) {
     height: 120px;
     padding: 16px;
   }
+  @media (min-width: 1920px) {
+    height: 135px;
+    & + li {
+      margin-top: 24px;
+    }
+  }
 `;
 
 export const ProductImage = styled.img`
-  width: 80px;
-  height: 80px;
+  width: 84px;
+  height: 100%;
   padding: 8px;
   margin-right: 8px;
   border-radius: 8px;
   object-fit: cover;
   background: ${({ theme }) => theme.colors.background};
   @media (min-width: 375px) {
-    width: 90px;
-    height: 90px;
-    margin-right: 16px;
+    width: 104px;
+    margin-right: 12px;
   }
   @media (min-width: 1024px) {
     width: 70px;
-    height: 70px;
     margin-right: 8px;
   }
   @media (min-width: 1280px) {
-    width: 77px;
-    height: 77px;
+    margin-right: 12px;
   }
   @media (min-width: 1440px) {
     width: 84px;
-    height: 84px;
   }
   @media (min-width: 1600px) {
     margin-right: 16px;
     width: 90px;
-    height: 90px;
+  }
+  @media (min-width: 1920px) {
+    width: 103px;
   }
 `;
 
@@ -88,6 +92,7 @@ export const ProductInfo = styled.div`
   @media (min-width: 375px) {
     width: 85px;
     height: 85px;
+    padding-right: 24px;
   }
   @media (min-width: 1024px) {
     height: 65px;
@@ -98,6 +103,8 @@ export const ProductInfo = styled.div`
   @media (min-width: 1440px) {
     width: 82px;
     height: 82px;
+  }
+  @media (min-width: 1920px) {
   }
 `;
 
