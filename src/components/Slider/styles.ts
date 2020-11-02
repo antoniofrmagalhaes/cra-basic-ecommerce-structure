@@ -48,6 +48,9 @@ export const Container = styled.div<IContainerProps>`
       animation: 350ms ${fromRight} 150ms ease forwards;
     `}
   @media(min-width: 1024px) {
+    width: 30%;
+  }
+  @media (min-width: 1280px) {
     width: 25%;
   }
 `;
@@ -69,7 +72,8 @@ export const Header = styled.div`
   @media (min-width: 1024px) {
     padding: 8px;
   }
-  @media (min-width: 1280px) {
+  @media (min-width: 1920px) {
+    padding: 0 24px;
   }
 `;
 
@@ -84,4 +88,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   padding: 16px;
+  @media (min-width: 1920px) {
+    padding: 32px;
+  }
 `;
