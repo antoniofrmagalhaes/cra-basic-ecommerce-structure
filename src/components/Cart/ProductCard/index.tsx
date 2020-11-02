@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
-import { RiAddFill, RiDeleteBinLine, RiSubtractLine } from 'react-icons/ri';
 
 import { Product } from '../../../store/modules/cart/types';
 
@@ -10,8 +9,10 @@ import {
   ProductImage,
   ProductInfo,
   CounterContainer,
+  AddButton,
   DeleteProductButton,
   Price,
+  RemoveButton,
 } from './styles';
 
 import { formatPrice } from '../../../utils/formatPrice';
@@ -39,17 +40,13 @@ const ProductCard: React.FC<ProductCard> = ({ product }) => {
         <div>
           <Price>{formatPrice(product.amount * product.price)}</Price>
           <CounterContainer>
-            <div onClick={() => handleDecrementProduct(product)}>
-              <RiSubtractLine />
-            </div>
+            <RemoveButton onClick={() => handleDecrementProduct(product)} />
             <p>{product.amount}</p>
-            <div onClick={() => handleIncrementProduct(product)}>
-              <RiAddFill />
-            </div>
+            <AddButton onClick={() => handleIncrementProduct(product)} />
           </CounterContainer>
-          <DeleteProductButton onClick={() => handleRemoveProduct(product._id)}>
-            <RiDeleteBinLine />
-          </DeleteProductButton>
+          <DeleteProductButton
+            onClick={() => handleRemoveProduct(product._id)}
+          />
         </div>
       </ProductInfo>
     </Container>
