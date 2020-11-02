@@ -4,10 +4,7 @@ interface Colors {
   primaryText: string;
   secondaryText: string;
   background: string;
-  base: string;
-  border: string;
-  thumb: string;
-  track: string;
+  accentColor: string;
 }
 
 interface Theme {
@@ -16,15 +13,12 @@ interface Theme {
 
 const theme: Theme = {
   colors: {
-    primary: '#1a1a1a',
-    secondary: '#a626aa',
-    primaryText: '#e1e1e4',
-    secondaryText: '#1a1a1a',
-    background: '#f1f1f1',
-    base: '#151515',
-    border: '#f7c360',
-    thumb: '#2d2d2d',
-    track: '#1a1a1a',
+    primary: '#037FFC',
+    secondary: '#41b02e',
+    primaryText: '#1a1a1a',
+    secondaryText: '#f1f1f1',
+    background: '#ffffff',
+    accentColor: '#eaeaea',
   },
 };
 
