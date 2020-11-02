@@ -2,38 +2,22 @@ import React from 'react';
 
 import Slider from '../Slider';
 
-import ProductCard from './ProductCard';
+import ProductList from './ProductList';
+import CheckoutButton from './CheckoutButton';
+import Subtotal from './Subtotal';
 
 import { useCart } from '../../contexts/CartContext';
 
-import {
-  ListContainer,
-  ListHeader,
-  List,
-  SubtotalContainer,
-  CheckoutButton,
-} from './styles';
-
 const Cart: React.FC = () => {
-  const { cart, subtotal, handleCloseCart } = useCart();
+  const {
+    cart: { products },
+    handleCloseCart,
+  } = useCart();
+
   return (
     <Slider>
-      <ListContainer>
-        <ListHeader>
-          <p>Meus Itens</p>
-        </ListHeader>
-        <List>
-          {cart.products.map(p => (
-            <ProductCard key={p._id} product={p} />
-          ))}
-        </List>
-      </ListContainer>
-      <SubtotalContainer>
-        <div>
-          <p>Subtotal:</p>
-          <strong>{subtotal}</strong>
-        </div>
-      </SubtotalContainer>
+      <ProductList products={products} />
+      <Subtotal />
       <CheckoutButton to="/cart" onClick={handleCloseCart}>
         Finalizar Pedido
       </CheckoutButton>
