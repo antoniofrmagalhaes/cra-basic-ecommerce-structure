@@ -31,7 +31,7 @@ export const Container = styled.div`
         margin-right: 16px;
       }
       > input {
-        width: 100%;
+        width: calc(100% - 35px - 16px);
         height: 30px;
         padding: 0 16px;
         border-radius: 4px;
