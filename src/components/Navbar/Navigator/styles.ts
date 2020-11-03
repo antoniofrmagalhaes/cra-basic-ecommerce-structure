@@ -39,9 +39,9 @@ export const Container = styled.div`
             justify-content: center;
             align-items: center;
             padding: 4px 3px 3px;
-            color: white;
+            color: ${({ theme }) => theme.colors.secondaryTextColor};
             border-radius: 50%;
-            background: red;
+            background: ${({ theme }) => theme.colors.dangerColor};
             @supports (-moz-appearance: none) {
               right: 2px;
               padding: 3px 3px 3px;

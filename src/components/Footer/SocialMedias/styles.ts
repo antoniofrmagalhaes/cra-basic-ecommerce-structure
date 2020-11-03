@@ -17,11 +17,50 @@ export const Container = styled.div`
       margin-right: 8px;
       > a {
         > svg {
+          color: ${({ theme }) => theme.colors.socialMediaIconsColor};
           font-size: 22px;
         }
       }
-      &:last-child {
+      &:nth-child(1) {
+        &:hover {
+          > a {
+            > svg {
+              color: ${({ theme }) => theme.colors.facebookColor};
+              font-size: 22px;
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        &:hover {
+          > a {
+            > svg {
+              color: ${({ theme }) => theme.colors.instagramColor};
+              font-size: 22px;
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        &:hover {
+          > a {
+            > svg {
+              color: ${({ theme }) => theme.colors.twitterColor};
+              font-size: 22px;
+            }
+          }
+        }
+      }
+      &:nth-child(4) {
         margin-right: 0;
+        &:hover {
+          > a {
+            > svg {
+              color: ${({ theme }) => theme.colors.youtubeColor};
+              font-size: 22px;
+            }
+          }
+        }
       }
     }
   }

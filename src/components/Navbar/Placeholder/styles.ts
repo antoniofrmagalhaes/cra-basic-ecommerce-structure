@@ -7,8 +7,8 @@ export const Container = styled.div`
   padding: 0 16px;
   justify-content: flex-end;
   align-items: center;
-  color: white;
-  background: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.secondaryTextColor};
+  background: ${({ theme }) => theme.colors.primaryColor};
   > p {
     margin-left: 16px;
   }
