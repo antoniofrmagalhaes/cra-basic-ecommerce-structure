@@ -45,7 +45,7 @@ const CartList: React.FC = () => {
         <Table>
           <tbody>
             {cart.products.map(product => (
-              <tr>
+              <tr key={product._id}>
                 <td>
                   <img src={product.image} alt={product.name} />
                   <DiscountTag>
