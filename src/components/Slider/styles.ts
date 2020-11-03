@@ -15,7 +15,7 @@ const fromRight = keyframes`
 `;
 
 export const Overlay = styled.div<IContainerProps>`
-  z-index: 3;
+  z-index: 5;
   display: none;
   position: fixed;
   top: 0;
