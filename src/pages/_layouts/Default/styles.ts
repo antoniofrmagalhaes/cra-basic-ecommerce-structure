@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 interface IContentProps {
-  compact?: boolean;
+  isCompact?: boolean;
   isNavbarSticky: boolean;
 }
 
@@ -13,18 +13,17 @@ export const Container = styled.div`
 
 export const Content = styled.div<IContentProps>`
   width: 100%;
-  ${({ compact, isNavbarSticky }) =>
-    compact &&
+  ${({ isCompact, isNavbarSticky }) =>
+    isCompact &&
     css`
+      @media (min-width: 1024px) {
+        height: calc(87%);
+      }
       ${isNavbarSticky &&
       css`
-        padding-top: calc(35px + 64px);
-        @media (min-width: 769px) {
-          padding-top: calc(35px + 8px);
+        @media (min-width: 1024px) {
+          height: calc(87%);
         }
       `}
-      @media (min-width: 769px) {
-        height: calc(100% - 65px - 35px - 32px);
-      }
     `}
 `;
