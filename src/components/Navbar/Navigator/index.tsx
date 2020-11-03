@@ -6,39 +6,48 @@ import {
   RiShoppingCart2Line,
 } from 'react-icons/ri';
 
-import { useCart } from '../../../contexts/CartContext';
-
 import { Container } from './styles';
 
 interface NavigatorProps {
   toggleSearch: () => void;
+  openCart: () => void;
+  cartLenth: number;
 }
 
-const Navigator: React.FC<NavigatorProps> = ({ toggleSearch }) => {
-  const { length, handleOpenCart } = useCart();
+const Navigator: React.FC<NavigatorProps> = ({
+  toggleSearch,
+  openCart,
+  cartLenth,
+}) => {
   return (
     <Container>
       <ul>
         <li>
-          <RiSearchLine size={28} onClick={toggleSearch} />
+          <div>
+            <RiSearchLine size={20} onClick={toggleSearch} />
+          </div>
         </li>
         <li>
           <button type="button">
-            <RiInboxUnarchiveLine size={28} />
+            <div>
+              <RiInboxUnarchiveLine size={20} />
+            </div>
             <p>Meus Pedidos</p>
           </button>
         </li>
         <li>
           <button type="button">
-            <RiFileListLine size={28} />
+            <div>
+              <RiFileListLine size={20} />
+            </div>
             <p>Minhas Listas</p>
           </button>
         </li>
         <li>
-          <button type="button" onClick={handleOpenCart}>
+          <button type="button" onClick={openCart}>
             <div>
-              <RiShoppingCart2Line size={28} />
-              <span>{length}</span>
+              <RiShoppingCart2Line size={20} />
+              <span>{cartLenth}</span>
             </div>
             <p>Meu Carrinho</p>
           </button>

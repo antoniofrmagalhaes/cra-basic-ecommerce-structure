@@ -34,19 +34,19 @@ export const TableHeader = styled.div`
         font-weight: bold;
       }
       &:nth-child(1) {
-        @media (max-width: 768px) {
+        @media (max-width: 1023px) {
           display: none;
         }
       }
       &:nth-child(2) {
         padding-left: 16px;
-        @media (max-width: 768px) {
+        @media (min-width: 375px) {
           width: 150px;
         }
       }
       &:nth-child(3) {
         text-align: center;
-        @media (max-width: 768px) {
+        @media (max-width: 1023px) {
           display: none;
         }
       }
@@ -60,12 +60,12 @@ export const TableHeader = styled.div`
       }
       &:nth-child(6) {
         text-align: center;
-        @media (max-width: 768px) {
+        @media (max-width: 1023px) {
           display: none;
         }
       }
 
-      @media (min-width: 769px) {
+      @media (min-width: 1024px) {
         &:nth-child(1) {
           width: 100px;
         }
@@ -106,7 +106,7 @@ export const DiscountTag = styled.div`
   justify-content: center;
   align-items: center;
   top: 0;
-  right: 0;
+  left: 0;
   color: #ffffff;
   background: #41b02e;
 `;
@@ -125,15 +125,13 @@ export const Table = styled.table`
       border-bottom: 1px solid #ddd;
     }
     td {
-      border-left: 1px solid #ddd;
-      border-right: 1px solid #ddd;
-      border-left: none;
       > img {
         width: 99px;
         height: 100px;
-        object-fit: cover;
+        border-right: 1px solid #dddddd;
         padding: 16px;
         background: #ffffff;
+        object-fit: cover;
       }
     }
   }
@@ -141,20 +139,20 @@ export const Table = styled.table`
     &:nth-child(1) {
       position: relative;
       width: 100px;
-      @media (max-width: 768px) {
+      @media (max-width: 1023px) {
         display: none;
       }
     }
     &:nth-child(2) {
       padding: 0 16px;
-      @media (max-width: 768px) {
+      @media (max-width: 1023px) {
         width: 150px;
       }
     }
     &:nth-child(3) {
       text-align: center;
       width: 100px;
-      @media (max-width: 768px) {
+      @media (max-width: 1023px) {
         display: none;
       }
     }
@@ -170,9 +168,6 @@ export const Table = styled.table`
     &:nth-child(6) {
       text-align: center;
       width: 100px;
-      @media (max-width: 768px) {
-        display: none;
-      }
     }
   }
 `;
@@ -186,15 +181,19 @@ export const RemoveAllProductsButton = styled.button.attrs({
   border: 0;
   background: 0;
   opacity: 0.7;
+  transition: all 250ms ease;
   &:hover {
     opacity: 1;
+    color: ${({ theme }) => theme.colors.danger};
   }
 `;
 
 export const RemoveProductButton = styled.div`
   cursor: pointer;
   opacity: 0.7;
+  transition: all 250ms ease;
   &:hover {
+    color: ${({ theme }) => theme.colors.danger};
     opacity: 1;
   }
 `;

@@ -2,9 +2,11 @@ import React from 'react';
 
 interface INavbarContextProps {
   navbarRef: React.RefObject<HTMLDivElement>;
+  navbarHeight: number;
   isNavbarSticky: boolean;
-  searchOpen: boolean;
-  handleOpenSearch: () => void;
+  isSearchOpen: boolean;
+  toggleSearch: () => void;
+  closeSearch: () => void;
 }
 
 const NavbarContext = React.createContext<INavbarContextProps>(
@@ -24,11 +26,19 @@ export const useNavbar = (): INavbarContextProps => {
 
 export function useProvideNavbar(): INavbarContextProps {
   const [isNavbarSticky, setIsNavbarSticky] = React.useState(false);
-  const [searchOpen, setSearchOpen] = React.useState(false);
+  const [isSearchOpen, setIsSearchOpen] = React.useState(false);
+  const [navbarHeight, setNavbarHeight] = React.useState(0);
   const navbarRef = React.useRef<HTMLDivElement>(null);
-  const handleOpenSearch = () => setSearchOpen(!searchOpen);
+  const toggleSearch = () => setIsSearchOpen(!isSearchOpen);
 
-  const handleScroll = () => {
+  React.useEffect(() => {
+    if (navbarRef.current) {
+      setNavbarHeight(navbarRef.current.offsetHeight);
+      setIsNavbarSticky(navbarRef.current?.getBoundingClientRect().top <= 0);
+    }
+  }, []);
+
+  const handleScroll = React.useCallback(() => {
     if (
       navbarRef.current &&
       navbarRef.current?.getBoundingClientRect().top <= 0
@@ -36,24 +46,23 @@ export function useProvideNavbar(): INavbarContextProps {
       return setIsNavbarSticky(true);
     }
     return setIsNavbarSticky(false);
-  };
+  }, []);
 
   React.useEffect(() => {
-    if (navbarRef.current) {
-      setIsNavbarSticky(navbarRef.current?.getBoundingClientRect().top <= 0);
-    }
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', () => handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   return {
     navbarRef,
+    navbarHeight,
     isNavbarSticky,
-    searchOpen,
-    handleOpenSearch,
+    isSearchOpen,
+    toggleSearch,
+    closeSearch: () => setIsSearchOpen(false),
   };
 }
 

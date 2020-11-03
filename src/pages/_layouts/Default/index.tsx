@@ -22,7 +22,7 @@ const Default: React.FC<DefaultLayoutProps> = ({ children, isCompact }) => {
     <ScrollLock isActive={isOpen}>
       <Container id="home">
         <Navbar />
-        <Content isNavbarSticky={isNavbarSticky} compact={isCompact}>
+        <Content isNavbarSticky={isNavbarSticky} isCompact={isCompact}>
           {children}
         </Content>
         <Footer />
