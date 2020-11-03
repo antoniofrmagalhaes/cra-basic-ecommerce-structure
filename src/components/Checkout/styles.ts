@@ -39,9 +39,12 @@ export const Container = styled.div`
       }
     }
   }
-  @media (min-width: 769px) {
-    width: 25%;
+  @media (min-width: 1024px) {
+    width: 40%;
     margin-top: 0;
+  }
+  @media (min-width: 1280px) {
+    width: 30%;
   }
 `;
 
