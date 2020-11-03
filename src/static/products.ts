@@ -19,7 +19,7 @@ import t from './images/boots/t.jpg';
 
 export default [
   {
-    name: 'Java or Scala, Any Framework & REST API',
+    name: 'Bota Eco Canyon West Earth Preta',
     image: a,
     description:
       'Insecure Resource. You are linking to a resource using the non-secure http:// protocol, which may not work when the browser is using',
@@ -29,7 +29,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'Java 8+, Akka HTTP or Spring Boot & REST API',
+    name: 'Bota Coturno Adventure Sapatofran',
     image: t,
     description:
       'createRef() and attach them to React elements via the ref attribute. ... You pass the ref to the child component as a differently named',
@@ -39,7 +39,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'Scala, Regex',
+    name: 'Bota Casual Neway Zíper Perfuros Preta',
     image: c,
     description:
       'That property will be null until the element/component is mounted.',
@@ -49,7 +49,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'Node.js, PHP, Java or Ruby',
+    name: 'Bota Couro Democrata Recortes Marrom',
     image: e,
     description:
       'Here is a step-by-step explanation of what happens in the above example',
@@ -59,7 +59,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'Python, Flask, SQLite',
+    name: 'Bota Ride Skateboard Tratorada Marrom',
     image: f,
     description: '',
     price: 199,
@@ -68,7 +68,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'PHP, Silex, MySQL',
+    name: 'Bota Coturno Couro Democrata',
     image: g,
     description: '',
     price: 125,
@@ -77,7 +77,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'Ruby & Rails',
+    name: 'Bota Coturno em Couro Mega Boots 6',
     image: h,
     description: '',
     price: 120,
@@ -86,7 +86,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: '(Node.js or Ruby) & Any Framework',
+    name: 'Bota Coturno Stefanini Firenze Preto',
     image: i,
     description: '',
     price: 190,
@@ -95,7 +95,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'Kotlin, Scala, Java',
+    name: 'Bota Coturno Couro Ride Skateboard',
     image: j,
     description: '',
     price: 120,
@@ -104,7 +104,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'Java or Ruby',
+    name: 'Bota Adventure Couro Esportes',
     image: k,
     description: '',
     price: 145,
@@ -113,7 +113,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'Java or Elixir',
+    name: 'Tênis Adventure Gisela Costa Preta',
     image: l,
     description: '',
     price: 199,
@@ -122,7 +122,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'Any Language & Any Framework & Web API',
+    name: 'Bota Coturno Lutier Camurça Longitud',
     image: m,
     description: '',
     price: 155,
@@ -131,7 +131,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'Java, Spring Boot, REST API',
+    name: 'Bota Coturno Lutier Las Vegas Café',
     image: n,
     description: '',
     price: 255,
@@ -140,7 +140,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'Ruby, Python or Kotlin',
+    name: 'Bota Ride Skateboard Vegan Amarela',
     image: o,
     description: '',
     price: 300,
@@ -149,7 +149,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'Any Language & Any Framework',
+    name: 'Bota Coturno Couro Ride Skateboard',
     image: p,
     description: '',
     price: 299.99,
@@ -158,7 +158,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'C-Sharp, Entity Framework, Asp.net & Web API',
+    name: 'Bota Coturno FiveBlu Recorte Marrom',
     image: q,
     description: '',
     price: 124.5,
@@ -167,7 +167,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'PHP, Laravel, Docker',
+    name: 'Bota FiveBlu Lisa Preta',
     image: r,
     description: '',
     price: 124.5,
@@ -176,7 +176,7 @@ export default [
     updatedAt: new Date().toISOString(),
   },
   {
-    name: 'Node.js or .NET Core',
+    name: 'Bota Cano Alto Speed Motociclista ',
     image: s,
     description: '',
     price: 124.5,
