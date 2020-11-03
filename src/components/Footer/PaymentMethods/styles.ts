@@ -15,10 +15,9 @@ export const Container = styled.div`
       border-radius: 4px;
       margin-top: 8px;
       margin-right: 8px;
-      border-top: 1px solid #aaaaaa;
-      border-right: 1px solid #aaaaaa;
-      border-bottom: 1px solid #aaaaaa;
-      background: #999999;
+      border-top: 1px solid ${({ theme }) => theme.colors.borderColor};
+      border-right: 1px solid ${({ theme }) => theme.colors.borderColor};
+      border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
       object-fit: cover;
       &:last-child {
         margin-right: 0;

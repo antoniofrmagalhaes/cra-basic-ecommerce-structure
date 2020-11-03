@@ -4,7 +4,8 @@ export const Container = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
+  background: ${({ theme }) => theme.colors.backgroundColor};
   > p {
     display: -webkit-box;
     text-overflow: ellipsis;
@@ -28,7 +29,8 @@ export const ProductInfo = styled.div`
   align-items: space-between;
   justify-content: center;
   padding: 8px 16px;
-  background: #dddddd;
+  color: ${({ theme }) => theme.colors.secondaryTextColor};
+  background: ${({ theme }) => theme.colors.primaryColor};
 
   > div {
     display: flex;
@@ -41,9 +43,10 @@ export const ProductInfo = styled.div`
     > button {
       padding: 5px;
       opacity: 0.8;
-      transition: all 350ms ease;
+      color: ${({ theme }) => theme.colors.secondaryTextColor};
       border: 0;
       background: 0;
+      transition: all 350ms ease;
       &:hover {
         opacity: 1;
       }

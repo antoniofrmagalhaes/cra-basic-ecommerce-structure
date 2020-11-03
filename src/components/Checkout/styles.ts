@@ -9,8 +9,8 @@ export const Container = styled.div`
   padding: 16px;
   margin-top: 16px;
   border-radius: 4px;
-  border: 1px solid #dddddd;
-  background: #ffffff;
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
+  background: ${({ theme }) => theme.colors.backgroundColor};
   > p {
     margin-bottom: 8px;
   }
@@ -18,7 +18,7 @@ export const Container = styled.div`
     width: 100%;
     height: 106px;
     padding-top: 16px;
-    border-top: 1px solid #dddddd;
+    border-top: 1px solid ${({ theme }) => theme.colors.borderColor};
     > div {
       width: 100%;
       height: 30px;
@@ -31,11 +31,11 @@ export const Container = styled.div`
         margin-right: 16px;
       }
       > input {
-        width: 100%;
+        width: calc(100% - 35px - 16px);
         height: 30px;
         padding: 0 16px;
         border-radius: 4px;
-        border: 1px solid #dddddd;
+        border: 1px solid ${({ theme }) => theme.colors.borderColor};
       }
     }
   }
@@ -79,6 +79,6 @@ export const CheckoutButton = styled.button.attrs({
   margin-top: 16px;
   border-radius: 4px;
   border: 0;
-  color: white;
-  background: #41b02e;
+  color: ${({ theme }) => theme.colors.secondaryTextColor};
+  background: ${({ theme }) => theme.colors.secondaryColor};
 `;

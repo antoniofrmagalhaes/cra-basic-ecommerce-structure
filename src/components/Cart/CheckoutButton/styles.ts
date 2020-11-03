@@ -11,8 +11,8 @@ export const Container = styled(Link)`
   align-items: center;
   border-radius: 4px;
   border: 0;
-  color: ${({ theme }) => theme.colors.secondaryText};
-  background: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.secondaryTextColor};
+  background: ${({ theme }) => theme.colors.secondaryColor};
   @media (min-width: 1920px) {
     height: 70px;
   }

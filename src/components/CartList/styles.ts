@@ -5,8 +5,8 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 4px;
-  border: 1px solid #dddddd;
-  background: #ffffff;
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
+  background: ${({ theme }) => theme.colors.backgroundColor};
   @media (min-width: 769px) {
     margin-right: 16px;
   }
@@ -19,9 +19,9 @@ export const TableHeader = styled.div`
   align-items: center;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  background: #fcfcfc;
+  background: ${({ theme }) => theme.colors.backgroundColor};
   height: 50px;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
   > table {
     width: calc(100% - 15px);
     border-collapse: collapse;
@@ -95,7 +95,7 @@ export const TableHeader = styled.div`
 export const Scroll = styled.div`
   height: calc(100% - 100px);
   overflow-y: scroll;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor}; ;
 `;
 
 export const DiscountTag = styled.div`
@@ -107,8 +107,8 @@ export const DiscountTag = styled.div`
   align-items: center;
   top: 0;
   left: 0;
-  color: #ffffff;
-  background: #41b02e;
+  color: ${({ theme }) => theme.colors.secondaryTextColor};
+  background: ${({ theme }) => theme.colors.secondaryColor};
 `;
 
 export const Table = styled.table`
@@ -117,20 +117,20 @@ export const Table = styled.table`
   border-collapse: collapse;
   border-spacing: 0;
   table-layout: fixed;
-  background: #f7f7f7;
+  background: ${({ theme }) => theme.colors.backgroundColor};
   tr {
     height: 100px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
     &:last-child {
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
     }
     td {
       > img {
         width: 99px;
         height: 100px;
-        border-right: 1px solid #dddddd;
+        border-right: 1px solid ${({ theme }) => theme.colors.borderColor};
         padding: 16px;
-        background: #ffffff;
+        background: ${({ theme }) => theme.colors.backgroundColor};
         object-fit: cover;
       }
     }
@@ -203,16 +203,16 @@ export const CounterContainer = styled.div`
   width: 76px;
   margin: 0 auto;
   border-radius: 4px;
-  border: 1px solid #dddddd;
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
   > p {
     width: 28px;
     height: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
-    background: #ffffff;
+    border-left: 1px solid ${({ theme }) => theme.colors.borderColor};
+    border-right: 1px solid ${({ theme }) => theme.colors.borderColor};
+    background: ${({ theme }) => theme.colors.backgroundColor};
   }
   > div {
     cursor: pointer;

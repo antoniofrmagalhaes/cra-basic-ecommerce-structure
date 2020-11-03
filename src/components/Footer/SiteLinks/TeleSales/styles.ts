@@ -24,14 +24,14 @@ export const Content = styled.div`
       align-items: center;
       margin-top: 10px;
       border-radius: 4px;
-      color: #037ffc;
-      border: 1px solid #037ffc;
+      color: ${({ theme }) => theme.colors.primaryColor};
+      border: 1px solid ${({ theme }) => theme.colors.primaryColor};
       transition: all 350ms ease;
       box-shadow: 1px 3px 15px -7px rgba(0, 0, 0, 0.4);
-      background: #ffffff;
+      background: ${({ theme }) => theme.colors.backgroundColor};
       &:hover {
-        border-color: #41b02e;
-        color: #41b02e;
+        border-color: ${({ theme }) => theme.colors.secondaryColor};
+        color: ${({ theme }) => theme.colors.secondaryColor};
       }
       > svg {
         margin-right: 8px;

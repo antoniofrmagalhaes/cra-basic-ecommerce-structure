@@ -11,8 +11,8 @@ export const Container = styled.div<ContainerProps>`
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
-  border-bottom: 1px solid #dddddd;
-  background: #ffffff;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
+  background: ${({ theme }) => theme.colors.backgroundColor};
   ${({ isSticky }) =>
     isSticky &&
     css`
@@ -34,7 +34,7 @@ export const Container = styled.div<ContainerProps>`
     flex-direction: row;
     padding: 8px 46px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1280px) {
     padding: 12px 46px;
   }
   @media (min-width: 1920px) {

@@ -59,11 +59,11 @@ export const Container = styled.div<ContainerProps>`
       padding: 0 16px;
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
-      border: 1px solid #aaaaaa;
+      border: 1px solid ${({ theme }) => theme.colors.borderColor};
       border-right: none;
       transition: all 350ms ease;
       &:focus {
-        border: 1px solid ${({ theme }) => theme.colors.primary};
+        border: 1px solid ${({ theme }) => theme.colors.primaryColor};
         border-right: none;
       }
     }
@@ -75,10 +75,10 @@ export const Container = styled.div<ContainerProps>`
       align-items: center;
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px;
-      border: 1px solid #037ffc;
+      border: 1px solid ${({ theme }) => theme.colors.primaryColor};
       border-left: none;
-      color: white;
-      background: #037ffc;
+      color: ${({ theme }) => theme.colors.secondaryTextColor};
+      background: ${({ theme }) => theme.colors.primaryColor};
     }
   }
   @media (min-width: 1024px) {

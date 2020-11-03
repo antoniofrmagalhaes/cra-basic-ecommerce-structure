@@ -22,7 +22,7 @@ export const Overlay = styled.div<IContainerProps>`
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(255, 255, 255, 1);
+  background: ${({ theme }) => theme.colors.backgroundColor};
   ${({ isOpen }) =>
     isOpen &&
     css`
@@ -41,7 +41,7 @@ export const Container = styled.div<IContainerProps>`
   right: 0;
   bottom: 0;
   transform: translateX(100%);
-  background: #ffffff;
+  background: ${({ theme }) => theme.colors.backgroundColor};
   ${({ isOpen }) =>
     isOpen &&
     css`
@@ -62,9 +62,9 @@ export const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  border-bottom: 1px solid #dddddd;
-  color: white;
-  background: #037ffc;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
+  color: ${({ theme }) => theme.colors.secondaryTextColor};
+  background: ${({ theme }) => theme.colors.primaryColor};
   > p {
     letter-spacing: 2px;
     font-weight: 400;
