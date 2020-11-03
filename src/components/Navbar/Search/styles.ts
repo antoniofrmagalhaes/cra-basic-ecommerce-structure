@@ -1,11 +1,54 @@
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
-export const Container = styled.div`
+const fadeUp = keyframes`
+  0% {
+    transform: translateY(-100%); 
+    opacity: 0;
+  }
+  85% {
+    transform: translateY(-100%); 
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); 
+    opacity: 1;
+  }
+`;
+
+interface ContainerProps {
+  isOpen: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
+  z-index: 4;
+  display: none;
+  position: absolute;
+  width: calc(100% - 32px);
+  height: 100%;
   order: 2;
-  width: 100%;
-  height: 50px;
+  top: 100%;
+  left: 16px;
+  right: 16px;
   margin-top: 16px;
   border-radius: 4px;
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: ${fadeUp} 350ms ease-in forwards;
+  ${({ isOpen }) =>
+    isOpen &&
+    css`
+      display: block;
+    `}
+  @media(min-width: 1024px) {
+    position: relative;
+    flex: 1;
+    top: initial;
+    left: initial;
+    transform: initial;
+    opacity: initial;
+    animation: none;
+    margin: 0 32px;
+  }
   > div {
     width: 100%;
     height: 100%;
@@ -20,7 +63,7 @@ export const Container = styled.div`
       border-right: none;
       transition: all 350ms ease;
       &:focus {
-        border: 1px solid #037ffc;
+        border: 1px solid ${({ theme }) => theme.colors.primary};
         border-right: none;
       }
     }
@@ -38,9 +81,10 @@ export const Container = styled.div`
       background: #037ffc;
     }
   }
-  @media (min-width: 769px) {
+  @media (min-width: 1024px) {
+    display: block;
+    position: relative;
     order: 1;
     margin-top: 0;
-    margin-right: 32px;
   }
 `;

@@ -1,43 +1,39 @@
 import React, { HTMLAttributes } from 'react';
 
-import Logo from './Logo';
-import Search from './Search';
+import Placeholder from './Placeholder';
+import StickyContent from './StickyContent';
 import Navigator from './Navigator';
 
 import { useCart } from '../../contexts/CartContext';
 import { useNavbar } from '../../contexts/NavbarContext';
 
-import {
-  NavbarInfo,
-  Container,
-  StickyNavbar,
-  ProductCategoriesContainer,
-} from './styles';
+import { Container } from './styles';
+import Search from './Search';
+import Logo from './Logo';
 
 const Navbar: React.FC<HTMLAttributes<HTMLDivElement>> = () => {
-  const { isOpen } = useCart();
+  const { length, handleOpenCart } = useCart();
   const {
     navbarRef,
-    searchOpen,
+    isSearchOpen,
     isNavbarSticky,
-    handleOpenSearch,
+    toggleSearch,
+    closeSearch,
   } = useNavbar();
   return (
     <>
-      <NavbarInfo />
-      <Container
-        ref={navbarRef}
-        isCartOpen={isOpen}
-        active={isNavbarSticky}
-        isSearchOpen={searchOpen}
-      >
-        <StickyNavbar>
-          <Logo />
-          <Navigator toggleSearch={handleOpenSearch} />
-          {searchOpen && <Search />}
-        </StickyNavbar>
+      <Placeholder />
+      <Container ref={navbarRef}>
+        <StickyContent isSticky={isNavbarSticky}>
+          <Logo to="/" />
+          <Search isSearchOpen={isSearchOpen} closeSearch={closeSearch} />
+          <Navigator
+            toggleSearch={toggleSearch}
+            openCart={handleOpenCart}
+            cartLenth={length}
+          />
+        </StickyContent>
       </Container>
-      <ProductCategoriesContainer />
     </>
   );
 };

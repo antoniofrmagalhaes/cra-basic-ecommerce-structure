@@ -2,11 +2,19 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled(Link)`
-  width: 190px;
-  height: 50px;
+  width: 24px;
+  height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fafafa;
-  margin-right: 16px;
+  border-radius: 4px;
+  color: ${({ theme }) => theme.colors.secondaryText};
+  background: ${({ theme }) => theme.colors.primary};
+  @media (min-width: 1024px) {
+    position: relative;
+    width: 70px;
+    height: 100%;
+    top: initial;
+    left: initial;
+  }
 `;
