@@ -20,7 +20,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div>
           <span>{formatPrice(product.price)}</span>
           <button type="button" onClick={() => handleAddProduct(product)}>
-            Add Product
+            Adicionar Produto
           </button>
         </div>
       </ProductInfo>

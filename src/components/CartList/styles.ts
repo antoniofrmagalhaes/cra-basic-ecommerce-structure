@@ -39,10 +39,8 @@ export const TableHeader = styled.div`
         }
       }
       &:nth-child(2) {
+        width: 150px;
         padding-left: 16px;
-        @media (min-width: 375px) {
-          width: 150px;
-        }
       }
       &:nth-child(3) {
         text-align: center;
@@ -71,7 +69,8 @@ export const TableHeader = styled.div`
         }
 
         &:nth-child(2) {
-          padding: 0 16px;
+          width: 150px;
+          padding: 0 0 0 16px;
         }
         &:nth-child(3) {
           text-align: center;
@@ -79,9 +78,11 @@ export const TableHeader = styled.div`
         }
         &:nth-child(4) {
           text-align: center;
+          width: 120px;
         }
         &:nth-child(5) {
           text-align: center;
+          width: 100px;
         }
         &:nth-child(6) {
           text-align: center;
@@ -145,9 +146,7 @@ export const Table = styled.table`
     }
     &:nth-child(2) {
       padding: 0 16px;
-      @media (max-width: 1023px) {
-        width: 150px;
-      }
+      width: 150px;
     }
     &:nth-child(3) {
       text-align: center;
