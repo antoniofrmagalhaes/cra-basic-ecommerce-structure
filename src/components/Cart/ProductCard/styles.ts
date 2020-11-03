@@ -121,7 +121,7 @@ export const DeleteProductButton = styled(RiDeleteBinLine)`
   right: 0;
   font-size: 16px;
   opacity: 0.7;
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.primaryTextColor};
   &:hover {
     opacity: 1;
   }
@@ -143,8 +143,8 @@ export const CounterContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding-top: 1px;
-    border-top: 1px solid ${({ theme }) => theme.colors.primary};
-    border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
+    border-top: 1px solid ${({ theme }) => theme.colors.primaryColor};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.primaryColor};
     @media (min-width: 375px) {
       width: 28px;
       height: 24px;
@@ -178,8 +178,8 @@ export const AddButton = styled(RiAddLine)`
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   opacity: 0.7;
-  color: ${({ theme }) => theme.colors.secondaryText};
-  background: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.secondaryTextColor};
+  background: ${({ theme }) => theme.colors.primaryColor};
   &:hover {
     opacity: 1;
   }
@@ -215,8 +215,8 @@ export const RemoveButton = styled(RiSubtractLine)`
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   opacity: 0.7;
-  color: ${({ theme }) => theme.colors.secondaryText};
-  background: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.secondaryTextColor};
+  background: ${({ theme }) => theme.colors.primaryColor};
   &:hover {
     opacity: 1;
   }
